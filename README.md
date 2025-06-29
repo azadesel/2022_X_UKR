@@ -1,5 +1,6 @@
 # 2022_X_UKR
 
+---extract_country_from_locations.R---
 
 This R script extracts country names from a list of user-entered Twitter locations in an Excel file. It:
 
@@ -26,3 +27,20 @@ Rename or update the input_file path to match your own .xlsx file.
 Ensure your file has a column named location.
 
 Run the script to extract and save the list of matched countries.
+
+---Mapping_X_Locations.py---
+# Description:
+# This script reads a dataset of retweets, extracts country-level counts
+# for each "issue", and generates choropleth maps showing global distribution.
+# The map uses a log scale for color but labels legend in raw counts.
+#
+# Input:
+#   - Excel file with 'Issues' and 'Countries' columns
+#   - Shapefile for world country borders
+#
+# Output:
+#   - JPEG maps for each issue saved in /output directory
+#
+# Dependencies: pandas, geopandas, matplotlib, numpy
+# --------------------------------------------
+
