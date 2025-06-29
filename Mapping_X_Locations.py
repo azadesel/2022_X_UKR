@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 """
 plot_retweet_maps.py
@@ -25,18 +20,12 @@ Usage:
 """
 
 
-# In[ ]:
-
-
 import os
 import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
-
-
-# In[ ]:
 
 
 # ------------------ Config ------------------ #
@@ -56,7 +45,6 @@ name_map = {
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# In[ ]:
 
 
 # ------------------ Load Data ------------------ #
@@ -67,8 +55,6 @@ df['Countries'] = df['Countries'].str.strip().replace(name_map)
 world = gpd.read_file(SHAPEFILE_PATH)
 world = world[world['ADMIN'] != 'Antarctica']
 
-
-# In[ ]:
 
 
 # ------------------ Plotting Function ------------------ #
@@ -125,8 +111,6 @@ def plot_issue_map(issue):
     print(f"Saved: {filepath}")
     plt.close(fig)
 
-
-# In[ ]:
 
 
 # ------------------ Run ------------------ #
